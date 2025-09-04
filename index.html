@@ -1,123 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HomeSight™ - Exterior Home Inspection Service</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NextGen Exteriors — Stucco • EIFS • Stone &amp; Stucco (Wichita, KS)</title>
+  <meta name="description" content="NextGen Exteriors: Kansas family-run stucco & EIFS pros. Medium sand finishes, Sto® systems, stone & stucco, repairs, and new builds. Free estimates." />
+  <meta property="og:title" content="NextGen Exteriors — Stucco • EIFS • Stone & Stucco" />
+  <meta property="og:description" content="Kansas family-run stucco & EIFS pros. Medium sand finishes, Sto® systems, stone & stucco, repairs, and new builds." />
+  <meta property="og:type" content="website" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-      color: #222;
+    :root{
+      --black:#0f1115;--navy:#0b2a4a;--blue:#2d7bd3;--light:#f6f8fb;--white:#fff;--accent:#34c759;
     }
-    header {
-      background: linear-gradient(to right, navy, lightblue);
-      color: white;
-      padding: 20px;
-      text-align: center;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--light);color:#1b1f23;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:auto;padding:0 18px}
+    header.hero{
+      background:linear-gradient(135deg,var(--navy),#134e98);
+      color:var(--white);padding:28px 0 50px;position:relative;overflow:hidden
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    nav {
-      background: black;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-    nav a:hover {
-      color: lightblue;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .pricing-table {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .plan {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      width: 250px;
-      background: white;
-      text-align: center;
-    }
-    .plan h3 {
-      color: navy;
-    }
-    footer {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:46px;height:46px;border-radius:8px;background:var(--black);display:grid;place-items:center;font-weight:800}
+    nav ul{list-style:none;display:flex;gap:16px;padding:0;margin:0;flex-wrap:wrap}
+    nav{margin-top:10px}
+    .cta{display:inline-block;background:var(--accent);color:var(--black);padding:10px 16px;border-radius:8px;font-weight:700}
+    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+    @media (max-width:900px){.split{grid-template-columns:1fr}}
+    .tag{display:inline-block;background:#ffffff22;color:#eaf2ff;padding:6px 10px;border-radius:999px;font-size:.85rem;margin-bottom:8px}
+    .hero h1{margin:.2rem 0 0;font-size:clamp(28px,5vw,44px)}
+    .hero p{margin:.4rem 0 1rem;max-width:60ch}
+    .card{background:var(--white);border:1px solid #e6ebf2;border-radius:14px;padding:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+    h2{font-size:clamp(22px,3.8vw,30px);margin:6px 0 12px}
+    .list{margin:0;padding-left:18px}
+    .pill{display:inline-block;border:1px solid #dfe6ef;border-radius:999px;padding:6px 10px;margin:4px;background:#fff}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    @media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .ph{aspect-ratio:4/3;background:#e9eef6;border:1px dashed #c9d3e3;border-radius:10px;display:grid;place-items:center;color:#6c7a90;font-size:.95rem}
+    .price{font-size:1.2rem;font-weight:800}
+    footer{background:var(--black);color:#cfd6e4;padding:30px 0;margin-top:36px}
+    .inline-form{display:grid;gap:10px}
+    @media (min-width:720px){.inline-form{grid-template-columns:1fr 1fr}}
+    input,textarea{width:100%;padding:12px;border:1px solid #d6deea;border-radius:10px;background:#fff}
+    .btn{background:var(--navy);color:#fff;border:none;padding:12px 16px;border-radius:10px;font-weight:700}
+    .notice{background:#fff3cd;border:1px solid #ffe08a;color:#7a5d00;border-radius:10px;padding:10px 12px}
+    .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
   </style>
 </head>
 <body>
-  <header>
-    <h1>HomeSight™</h1>
-    <p>Inspect • Detect • Protect • Track</p>
+
+  <!-- Top Bar -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="bar">
+        <div class="brand">
+          <div class="logo">NG</div>
+          <div>
+            <strong style="font-size:1.1rem">NextGen Exteriors</strong><br>
+            <small>Stucco • EIFS • Stone &amp; Stucco — Wichita, KS</small>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#finishes">Finishes</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a class="cta" href="#contact">Free Estimate</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="split" style="margin-top:24px">
+        <div>
+          <span class="tag">Family-run • Kansas • 7th-generation craft</span>
+          <h1>Premium Stucco &amp; EIFS done right — on time, on budget, built to last.</h1>
+          <p>We specialize in Sto® systems, medium sand finishes, stone &amp; stucco facades, moisture management, and clean repairs that blend perfectly with existing work.</p>
+          <p>
+            <a class="cta" href="#contact">Get a same-day callback</a>
+            &nbsp; <a href="tel:+1-555-000-0000">Call: (555) 000-0000</a>
+          </p>
+          <div class="notice">Need space for equipment? We understand trailers, scaffolding, and shop access — we plan staging to keep driveways clear and neighbors happy.</div>
+        </div>
+        <div class="card">
+          <strong>Quick Specs</strong>
+          <ul class="list">
+            <li>Stucco / EIFS (Sto®, medium sand, acrylic, cement)</li>
+            <li>Stone &amp; stucco accents, bands, arches, sills</li>
+            <li>Windows, control joints, flashing, sealants</li>
+            <li>Crack repair &amp; color matches (StoColor®)</li>
+            <li>Residential • Multi-family • Light commercial</li>
+          </ul>
+          <div style="margin-top:8px">
+            <span class="pill">Licensed &amp; Insured</span>
+            <span class="pill">Photo Reports</span>
+            <span class="pill">Clean Jobsite</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>HomeSight™ offers quarterly exterior inspections to detect problems before they become costly repairs. We check roofs, siding, windows, gutters, and more to give you peace of mind year-round.</p>
-  </section>
-
-  <section id="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="pricing-table">
-      <div class="plan">
-        <h3>Standard</h3>
-        <p>$199/year</p>
-        <p>Quarterly inspections</p>
-        <p>Detailed reports</p>
+  <!-- Services -->
+  <section id="services" class="wrap">
+    <h2>Services</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>New Stucco / EIFS</h3>
+        <p>From substrate prep to finish coat. Sto®-specified assemblies for durability and drainage.</p>
       </div>
-      <div class="plan">
-        <h3>Premium</h3>
-        <p>$299/year</p>
-        <p>Quarterly inspections</p>
-        <p>Detailed reports</p>
-        <p>Drone roof inspection</p>
+      <div class="card">
+        <h3>Repairs &amp; Reskins</h3>
+        <p>Cracks, blisters, hail, or color-dating. We blend new finish to match your existing facade.</p>
+      </div>
+      <div class="card">
+        <h3>Stone &amp; Stucco</h3>
+        <p>Cast stone bands, quoins, sills, and modern stone accents for serious curb appeal.</p>
       </div>
     </div>
   </section>
 
-  <section id="faq">
-    <h2>FAQ</h2>
-    <p><strong>How do inspections work?</strong> Our experts visit quarterly and provide a digital report with photos.</p>
-    <p><strong>Can you inspect apartments or large buildings?</strong> Yes, we price by square footage for larger properties.</p>
+  <!-- Finishes -->
+  <section id="finishes" class="wrap">
+    <h2>Popular Finishes &amp; Color</h2>
+    <div class="card">
+      <p>Most-requested: <strong>Medium Sand</strong> acrylic finish. Color matched with <strong>StoColor®</strong> palettes (e.g., Swiss Coffee, Oyster, Graphite, Shadow Gray). We’ll sample boards on site before we commit.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+        <span class="pill">Medium Sand</span>
+        <span class="pill">Fine Sand</span>
+        <span class="pill">Cathedral</span>
+        <span class="pill">Rilled</span>
+        <span class="pill">Cast-wood / Cast-brick accents</span>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@homesight.com</p>
-    <p>Phone: (555) 123-4567</p>
+  <!-- Gallery placeholders -->
+  <section id="gallery" class="wrap">
+    <h2>Recent Work (Placeholders)</h2>
+    <div class="gallery">
+      <div class="ph">Front elevation — New EIFS</div>
+      <div class="ph">Stone &amp; banding</div>
+      <div class="ph">Color-match reskin</div>
+      <div class="ph">Medium sand close-up</div>
+      <div class="ph">Entry arch repair</div>
+      <div class="ph">Shop / trailer access</div>
+    </div>
+    <p style="margin-top:10px">Replace the gray boxes with your photos later — you can drag-drop images into this folder and link them.</p>
+  </section>
+
+  <!-- Pricing / Estimates -->
+  <section id="pricing" class="wrap">
+    <h2>Estimates &amp; Pricing</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Standard Home</h3>
+        <p class="price">Custom Quote</p>
+        <p>Most single-family homes. Includes color sample boards and photo report.</p>
+      </div>
+      <div class="card">
+        <h3>Stucco Repair</h3>
+        <p class="price">$ — $$</p>
+        <p>Per-area or per-day rates depending on scope. We blend to reduce patch visibility.</p>
+      </div>
+      <div class="card">
+        <h3>Multi-Unit / Apartments</h3>
+        <p class="price">Sq-ft Based</p>
+        <p>We price by square footage and complexity; ask for our apartment / HOA rate sheet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="wrap">
+    <h2>Free Estimate</h2>
+    <div class="card">
+      <p><strong>Call</strong> <a href="tel:+1-555-000-0000">(555) 000-0000</a> &nbsp;•&nbsp; <strong>Email</strong> <a href="mailto:bids@nextgen-exteriors.com">bids@nextgen-exteriors.com</a></p>
+      <form class="inline-form" name="estimate" netlify>
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="tel" name="phone" placeholder="Phone" />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="scope" rows="4" placeholder="Tell us your address and scope (new build, reskin, repair)…" required></textarea>
+        <button class="btn" type="submit">Request Estimate</button>
+      </form>
+      <p style="margin-top:8px"><small>Wichita • Andover • Derby • Goddard • Maize • Surrounding areas statewide by request.</small></p>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 HomeSight™ - All Rights Reserved</p>
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+        <p>© <span id="y"></span> NextGen Exteriors. All rights reserved.</p>
+        <p><a href="#services" style="color:#cfd6e4">Services</a> · <a href="#gallery" style="color:#cfd6e4">Gallery</a> · <a href="#contact" style="color:#cfd6e4">Contact</a></p>
+      </div>
+    </div>
   </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
